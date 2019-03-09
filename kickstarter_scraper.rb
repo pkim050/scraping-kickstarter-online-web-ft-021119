@@ -16,8 +16,7 @@ def create_project_hash
       description: element.css("p.bbcard_blurb").text,
       location: element.css("ul.project-meta span.location-name").text,
       percent_funded: element.css("ul.project-stats li.first.funded strong").text.gsub("%","").to_i
-  projects
-    }
+  projects}
   end
   
   # projects: kickstarter.css("li.project.grid_4")
@@ -27,4 +26,5 @@ def create_project_hash
   # location: project.css("ul.project-meta span.location-name").text
   # percent_funded: project.css("ul.project-stats li.first.funded strong").text.gsub("%","").to_i
   projects
+end
 end
